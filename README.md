@@ -20,3 +20,5 @@ Main stack of project:
 - [Axios](https://axios-http.com/)
 - [TanStack Query](https://tanstack.com/)
 - [floating-ui](https://floating-ui.com/)
+
+Main example contains in `src/Components/panels/react-hook-form-panel`. Also there is example without `react-hook-form` in `src/Components/panels/native-panel` that need to be uncommented in `src/Components/app` to use.
