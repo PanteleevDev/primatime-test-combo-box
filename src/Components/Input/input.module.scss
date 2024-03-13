@@ -1,0 +1,55 @@
+$primary: #115c99;
+$secondary: #38e9ef;
+$darkError: #631818;
+$error: #ef3838;
+$white: #fff;
+$gray: #9b9b9b;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+.orderContainer {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.label {
+  font-size: 18px;
+}
+.input {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-image 0.5s;
+  &:focus {
+    ~ .label {
+      color: $primary;
+    }
+    border-image: linear-gradient(to right, $primary, $secondary);
+    border-image-slice: 1;
+  }
+  &.disabled {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  &.error {
+    ~ .label {
+      color: $darkError;
+    }
+    border-image: linear-gradient(to right, $darkError, $error);
+    border-image-slice: 1;
+  }
+}
+
+.errorMessage {
+  height: 1em;
+  padding: 3px 0;
+  color: $error;
+  &.hideError {
+    visibility: hidden;
+  }
+}
